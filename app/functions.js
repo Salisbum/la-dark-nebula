@@ -20,24 +20,16 @@ exports.functionsAnswers = {
   },
 
   fizzBuzz : function(num) {
-    //
-    // for(var i = 0; i < num;)return((++i%3?'':'Fizz')+(i%5?'':'Buzz')||i);
-
-
-    var fb = 'fizzbuzz';
-    var fizz = 'fizz';
-    var buzz = 'buzz';
-
-    for (var i = 0; i <= num; i++)
-    {
-        if (i % 15 === 0)
-            return fb;
-        else if (i % 3 === 0)
-            return fizz;
-        else if (i % 5 === 0)
-            return buzz;
-        else
-            return i;
+     if (num % 15 === 0) {
+       return 'fizzbuzz';
+     } else if (num % 5 === 0) {
+       return 'buzz';
+     } else if (num % 3 === 0) {
+       return 'fizz';
+     } else if (typeof num === 'number') {
+       return num;
+     } else {
+       return false;
     }
   }
 };
